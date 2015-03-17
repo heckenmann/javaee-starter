@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.heckenmann</groupId>
+    <artifactId>javaee-starter</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Parent pom</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- Module, die zu diesem Projekt gehören -->
+    <!-- Die Sortierung der Liste entscheidet die Reihenfolge beim Bauen -->
+    <modules>
+        <!-- <module>ejb</module> -->
+        <!-- <module>war</module> -->
+        <!-- <module>ear</module> -->
+    </modules>
+
+    <!-- Properties definieren -->
+    <properties>
+        <maven.compiler.plugin.version>RELEASE</maven.compiler.plugin.version>
+        <jdk.version>1.8</jdk.version>
+    </properties>
+
+    <!-- Dependencies festlegen, die von mindestens zwei Modulen genutzt werden -->
+    <!-- Alle anderen Abhängigkeiten werden in den Modulen selber definiert -->
+    <dependencies>
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- PluginManagement definiert Plugins, die auch in den Child-Modulen genutzt werden -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <source>${jdk.version}</source>
+                        <target>${jdk.version}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
