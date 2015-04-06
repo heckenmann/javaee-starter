@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:jl="http://xmlns.jcp.org/jsf/composite/jsflive">
+<head>
+<title>Testseite</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<h:body>
+    <h1>Schreibe etwas!</h1>
+    <h:form prependId="false">
+        <h:inputText id="input" value="#{myBean.neuerAnhang}" />
+        <h:commandButton action="#{myBean.addText()}" value="Anfügen" type="submit" />
+        <br />
+        <br />
+        <h:inputTextarea id="textarea" value="#{myBean.ausgabe}" readonly="true" rows="15" cols="60" />
+        <script type="text/javascript">
+            document.getElementById("input").focus();
+            document.getElementById("textarea").scrollTop = document.getElementById("textarea").scrollHeight;
+        </script>
+    </h:form>
+</h:body>
+</html>
