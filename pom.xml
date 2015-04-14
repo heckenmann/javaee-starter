@@ -12,7 +12,6 @@
     <!-- Die Sortierung der Liste entscheidet die Reihenfolge beim Bauen -->
     <modules>
         <module>javaee-starter-ejb</module>
-        <module>javaee-starter-war</module>
         <module>javaee-starter-ear</module>
     </modules>
 

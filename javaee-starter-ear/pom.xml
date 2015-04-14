@@ -21,13 +21,13 @@
         <dependency>
             <groupId>de.heckenmann.javaee-starter</groupId>
             <artifactId>javaee-starter-ejb</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
             <type>ejb</type>
         </dependency>
         <dependency>
             <groupId>de.heckenmann.javaee-starter</groupId>
             <artifactId>javaee-starter-war</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
             <type>war</type>
         </dependency>
     </dependencies>
